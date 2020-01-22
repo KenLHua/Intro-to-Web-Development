@@ -1,0 +1,51 @@
+.tabContainer{
+    text-align:center;
+    max-width:1000px; min-width:450px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background:white;
+    max-height:50px;
+    margin:10px auto;
+    grid-gap:10px;
+    max-width:1000px; min-width:450px;
+    animation-name: fadeIn;
+    animation-duration: 4s;
+     
+    
+}
+/* Tabs */
+.tabContainer > div{
+    display:inline;
+    background-color:white;
+    max-height:inherit;
+}
+#tab1 ul, #tab2 ul, #tab3 ul, #tab4 ul,#tab5 ul{
+    max-height:0px;
+    text-align:left;
+    overflow:hidden;
+}
+#tab1:hover > ul, #tab2:hover >ul, #tab3:hover >ul, #tab4:hover>ul, #tab5:hover >ul{
+    max-height:300px;
+    transition: max-height 0.25s ease-in;
+}
+#tab1:hover, #tab2:hover, #tab3:hover, #tab4:hover, #tab5:hover{
+    max-height:300px;
+    transition: background-color 0.15s ease-in;
+    background-color:#88ffff;
+}
+
+#movingCat{
+    position: relative;
+    animation-name: movement;
+    animation-duration: 4s;
+    max-width:400px;
+    min-width:200px;
+    z-index: -1;
+}
+@keyframes movement{
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}

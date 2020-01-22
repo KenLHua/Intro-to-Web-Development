@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/main.js"></script>
+    <title>XXXXXX</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"></script>
+
+
+    
+</head>
+
+
+<body>
+    <div id="navButton" onclick="openNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="customdialog.html">Custom Dialog</a>
+        <a href="crud.html">CRUD</a>
+        <a href="styledcrud.html">Styled CRUD</a>
+    </div>
+    <header>
+        <h1>Native Diaglog</h1>
+    </header>
+    <button id ="alert">Alert</button>
+    <button id="confirm">Confirm</button>
+    <button id="prompt">Prompt</button>
+    <button id="safe_prompt">Safer Prompt</button>
+    <hr>
+    <p id="confirm_text" style="padding:5px; border:2px solid black;display: none"><output id="confirm_output"> </output></p>
+    <p id="prompt_text" style="padding:5px; border:2px solid black;display: none"><output id="prompt_output"> </output></p>
+    <p id="safe_prompt_text" style="padding:5px; border:2px solid black;display: none"><output id="safe_output"></output></p>
+
+    <script>
+        document.getElementById("alert").addEventListener("click", myalert);
+        document.getElementById("confirm").addEventListener("click", myconfirm);
+        document.getElementById("prompt").addEventListener("click", myprompt);
+        document.getElementById("safe_prompt").addEventListener("click", safeprompt);
+        function myalert() {
+            alert("Alert Pressed");
+        }
+        function myconfirm(){
+            var bool = confirm("Do you want to confirm nothing?");
+            txt = 'The value return by the confirm method is : ' + bool;
+            document.getElementById("confirm_output").innerHTML = txt;
+            document.getElementById("confirm_text").style.display= "initial";
+        }
+        function myprompt(){
+            txt = prompt("Enter some text please!");
+            if (txt == null || txt == ''){
+                document.getElementById("prompt_output").innerHTML = 'User didn\'t enter anything';
+            }
+            else{
+                document.getElementById("prompt_output").innerHTML = 'The value return by the prompt method is : ' + txt;
+            }
+            document.getElementById("prompt_text").style.display = "initial";
+        }
+        function safeprompt(){
+            txt = prompt("Enter some dangerous input!", "<b onmouseover=\"alert('hackerman')\">I hackered you</b>");
+            txt = DOMPurify.sanitize(txt);
+            if(txt == null || txt == ''){
+                document.getElementById("safe_output").innerHTML = 'User didn\'t enter anything';
+            }
+            else{
+                document.getElementById("safe_output").innerHTML = 'The value return by the safe_prompt method is : ' + txt; 
+            }
+            document.getElementById("safe_prompt_text").style.display = "initial";
+        }
+    </script>
+</body>
+
+</html>

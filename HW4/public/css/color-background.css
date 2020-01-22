@@ -1,0 +1,64 @@
+.container{
+    text-align:center;
+    max-width: 1000px;
+    min-width: 400px;
+    margin:auto;
+    
+}
+#left, #center, #right, .full{margin: 10px 10px 20px 10px; display: inline-block;}
+#left, #center, #right {vertical-align: top;}
+#left{width:346px;}
+#center{
+    background-image: url("/media/pixel_sky.jpg");
+    background-attachment: local;
+    border: 5px solid black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height:350px;
+    width:240px;
+}
+
+#right{
+    background-image: url("/media/tile_sky.jpg");
+    background-size: 64px 64px;
+    background-clip: border-box;
+    border: 5px solid black;
+    height:350px;
+    width:240px;
+
+}
+.full{
+    width: 900px;
+    height: 250px;
+    text-align: center;
+}
+
+#gradientPurple{
+    background-image: linear-gradient(to right, rgba(180,224,225,0),rgb(161,62,252,1));
+    
+}
+#gradientPink {
+    background-image: radial-gradient(rgb(216,182,254), rgba(180,224,225,0));
+}
+#translucentPurple{
+    background: rgb(234,128,252);
+    opacity: 50%;
+}
+#offsetBackground{
+    text-align: center;
+    border: 2px solid black;
+    background-image: url("/media/tile_sky.jpg");
+    width:800px;
+    height:128px;
+    background-repeat:no-repeat;
+    background-position: right;
+}
+img.border{
+    border:5px solid black;
+    background-clip:content-box;
+}
+p.purpleBox{
+    border: 3px solid black;
+    background-color: rgb(234,128,252);
+    padding: 3px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script>
+        
+        function showDialog(){
+            var x = document.getElementById("dialog");
+            x.show();
+        }
+        function closeDialog(){
+            var x = document.getElementById("dialog");
+            x.close();
+        }
+        function showPraise(){
+            var x = document.getElementById("praise_template");
+            var y = x.content.cloneNode(true);
+            document.body.appendChild(y)
+        }
+    </script>
+    <title>HW2 - Interactive.html</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="head.html">Head</a> |
+            <a href="sections.html">Sections</a> |
+            <a href="grouping.html">Grouping</a> |
+            <a href="text.html">Text</a> |
+            <a href="tables.html">Tables</a> |
+            <a href="embedded.html">Embedded</a> |
+            <a href="forms.html">Forms</a> |
+            <span id="currentPage">Interactive</span> |
+            <a href="attributes.html">Attributes</a> |
+            <a href="misc.html">Misc</a> |
+            <a href="text-css.html">Text CSS</a> |
+            <a href="color-background.html">Color Background</a> |
+            <a href="boxes.html">Boxes</a> |
+            <a href="layout-float-position.html">Layout Float</a> |
+            <a href="layout-flex.html">Layout Flex</a> |
+            <a href="layout-grid.html">Layout Grid</a> |
+            <a href="responsive.html">Responsive</a> |
+            <a href="css-wow.html">CSS Wow</a>
+        </nav>
+        <h1 class="animated jackInTheBox">Welcome to Interactive!</h1>
+        <hr style="width:80%;">
+    </header>
+    <button onclick="showDialog()"> Show dialog box  </button>
+    <button onclick="closeDialog()"> Close dialog</button> <br> <br>
+    <button onclick="grayCanvas()"> Turn canvas gray</button>
+    <button onclick="whiteCanvas()"> Turn canvas white</button>
+    <noscript>Dialog box will not appear since Javascript is not enabled.</noscript> <br>
+
+    <!-- The dialog box is not supported by all browsers-->
+    <dialog id="dialog">
+        Hi this is a box!
+    </dialog>
+    <noscript>Your browser does not support Javascript, so no dialog box will appear.</noscript>
+
+    <canvas id="myCanvas" width="500" height="500">Your browser does not support the HTML5 canvas tag.</canvas> <br>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillRect(0, 0, 500, 500);
+        function grayCanvas() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#555555";
+            ctx.fillRect(0, 0, 500, 500);
+        }
+        function whiteCanvas() {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FFFFFF";
+                ctx.fillRect(0, 0, 500, 500);
+            }
+    </script>
+    <noscript>Your browser does not support Javascript, so the canvas will not change.</noscript>
+
+    <button onclick="showPraise()">Praise cat template</button>
+    <template id="praise_template">
+        <h2> Praise cat </h2>
+        <img src="media/Praise_cat.jpg" alt="Praising cat" width="auto">
+    </template>
+    
+    <details>
+        <summary> This is summary of the details</summary>
+        <p>There is more information to add </p>
+    </details>
+</body>
+</html>

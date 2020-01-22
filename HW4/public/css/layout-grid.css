@@ -1,0 +1,18 @@
+
+.container{
+    text-align:center;
+    display:grid;
+    max-width:1000px; min-width:450px;
+    height:750px;
+    margin:10px auto;
+    grid-template-rows: 250px 250px 250px;
+    grid-gap:10px;
+}
+.middle{
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+}
+#article{
+    margin: 0px 2% 0px 2%;
+}
+#header,#footer,.sb,#article { background-color:rgb(217, 239, 240);}

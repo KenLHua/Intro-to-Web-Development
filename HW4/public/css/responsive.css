@@ -1,0 +1,70 @@
+div.content{
+    max-width:1000px;
+    min-width:300px;
+    max-height:1000px;
+    min-height:300px;
+}
+#curious{
+    max-width:400px; max-height:400px;
+    float:left;
+}
+p.left{
+    position:relative;
+    left:10px;
+}
+.mobNav{
+    display:none;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    #curious{
+        max-width:150px; max-height:150px;
+    }
+    p {
+        font-size:small;
+    }
+    #fullNav{
+        display:none;
+    }
+    /* Portion of code used from W3 as guidance */
+    .mobNav{
+        display:block;
+        overflow: hidden;
+        background-color: #4bacb8;
+        position: relative;
+    }
+    .mobNav #myLinks {
+        display: none;
+        grid-template-columns: 50% 50%;
+        
+    }
+    
+    /* Style navigation menu links */
+    .mobNav a{
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .mobNav a.icon {
+    background: #006978;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    #myLinks a{
+        color:white;
+    }
+    #myLinks a:hover{
+        background-color: white;
+        color:#4bacb8;
+    }
+    /* Portion of code used from W3 as guidance */
+
+}

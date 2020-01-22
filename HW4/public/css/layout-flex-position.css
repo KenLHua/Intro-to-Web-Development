@@ -1,0 +1,29 @@
+.container{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    max-width:1000px;
+    min-width:450px;
+    height:750px;
+    margin:10px auto;
+    vertical-align: middle;
+}
+.container > div{
+    margin: 0px 0px 10px 0px;
+    height:inherit;
+}
+.middle {
+    width:100%;
+    display:flex;
+    flex-direction: row;
+}
+#article{
+    width:48%;
+    margin: 0px 1% 0px 1%;
+}
+#lsb,#rsb{
+    width:25%;
+}
+#header,#footer,#lsb,#rsb,#article{
+    background-color:rgb(217, 239, 240);
+}

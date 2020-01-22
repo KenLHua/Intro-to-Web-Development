@@ -1,0 +1,97 @@
+header{
+    text-align:center;
+}
+
+header>nav a{
+    font-size:18px;
+    color: rgb(34,70,145);
+    text-decoration: none;
+}
+a:hover{
+    font-weight:bold;
+    text-decoration:underline;
+}
+header>nav a:visited { color: #3f1dcb;}
+
+header>h1 {
+    font-weight:bold;
+    font-size:xx-large;
+    letter-spacing: -1px;
+}
+span#currentPage{
+    font-weight:bold;
+    font-size:19px;
+    color:#46a792;
+}
+
+
+ul{
+    font-size:larger;
+    list-style-position: inside;
+    padding-left:10px;
+}
+ul>li {padding-left:10px;}
+
+table, th, td {border: 1px solid black;}
+
+td {text-align: center;}
+
+table.righttable {float:right;}
+
+table.lefttable {float:left;}
+
+table.centertable {float:center;}
+
+div.contains_table{
+    height:100%;
+    overflow: hidden;
+}
+footer>p {text-align: center; font-size:small; font-style:italic; font-weight:300;}
+body {background-color: rgb(180,224,225);}
+*{
+    font-size:medium;
+    font-family:'Roboto', sans-serif;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.bar{
+    width: 35px;
+    height: 5px;
+    background-color:white;
+    margin: 6px 0;
+}
+#navButton{
+    margin-left:10px;    
+    margin-top:20px;
+}

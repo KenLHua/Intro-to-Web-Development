@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+        img.border{
+                border: 2px solid black;
+        }
+        #dragdiv {
+            width: 200px;
+            height: 30px;
+            border: 1px solid #FFFFFF;
+        }
+        
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+        }
+        function showHidden(){
+            var x = document.getElementById("div_hidden");
+            x.hidden = false;
+        }
+    </script>
+    <title>HW2 - Attributes.html</title>
+</head>
+<body onload="document.getElementById('textarea1').focus();">
+    <header>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="head.html">Head</a> |
+            <a href="sections.html">Sections</a> |
+            <a href="grouping.html">Grouping</a> |
+            <a href="text.html">Text</a> |
+            <a href="tables.html">Tables</a> |
+            <a href="embedded.html">Embedded</a> |
+            <a href="forms.html">Forms</a> |
+            <a href="interactive.html">Interactive</a> |
+            <span id="currentPage">Attributes</span> |
+            <a href="misc.html">Misc</a> |
+            <a href="text-css.html">Text CSS</a> |
+            <a href="color-background.html">Color Background</a> |
+            <a href="boxes.html">Boxes</a> |
+            <a href="layout-float-position.html">Layout Float</a> |
+            <a href="layout-flex.html">Layout Flex</a> |
+            <a href="layout-grid.html">Layout Grid</a> |
+            <a href="responsive.html">Responsive</a> |
+            <a href="css-wow.html">CSS Wow</a> |
+        </nav>
+        <h1>Welcome to attributes!</h1>
+        <hr style="width:80%;">
+    </header>
+    <div>
+        <img data-cat-img="1" class="border" alt="bordered cat" src="media/longcat.jpg" width="100" height="100">
+        <img data-cat-img="2" alt="borderless cat" src="media/longcat.jpg" width="100" height="100">
+    </div>
+    <h2 contenteditable="true"> This is an editable header. Feel free to change it to anything.</h2>
+
+    <p dir="ltr"> عربى This is written left to right</p>
+    <p dir="rtl">This is written right to left  عربى </p>
+    <p>The text below is in japanese.</p>
+    <p lang="ja" translate="yes">お久しぶりです</p>
+    <div id="dragdiv" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <p id = "p1" draggable="true" ondragstart="drag(event)">This text is draggable into the box.</p>
+    <button accesskey="s" onclick="onS()"> Access key S </button>
+    <button onclick="showHidden()">Click to show hidden text</button> 
+    <br><br>
+    <div id="div_hidden" hidden>
+        <img alt="hidden dog meme" data-dog-img="1" src="media/sad_dog.jpg">
+        <p id="p2" >This information is hidden becuase it is no longer relevant.</p>
+    </div>
+
+    <textarea id="textarea1" cols="50" rows="5" spellcheck>Tihs txet aera hsa splelchekc
+    </textarea>
+    <br>
+
+    <input data-tab="1" type="text" id="tab1" tabindex="2" value="This is tab2">
+    <input data-tab="2" type="text" id="tab2" tabindex="1" value="This is tab1">
+    <input data-tab="3" type="text" tabindex="3" value="This is tab3">
+    <br><br>
+    <button title="Hi">Hover over to see a title</button>
+    <script>
+        function onS(){
+            alert("You pressed S or the button!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>HW2 - Tables.html</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="head.html">Head</a> |
+            <a href="sections.html">Sections</a> |
+            <a href="grouping.html">Grouping</a> |
+            <a href="text.html">Text</a> |
+            <span id="currentPage">Tables</span> |
+            <a href="embedded.html">Embedded</a> |
+            <a href="forms.html">Forms</a> |
+            <a href="interactive.html">Interactive</a> |
+            <a href="attributes.html">Attributes</a> |
+            <a href="misc.html">Misc</a> |
+            <a href="text-css.html">Text CSS</a> |
+            <a href="color-background.html">Color Background</a> |
+            <a href="boxes.html">Boxes</a> |
+            <a href="layout-float-position.html">Layout Float</a> |
+            <a href="layout-flex.html">Layout Flex</a> |
+            <a href="layout-grid.html">Layout Grid</a> |
+            <a href="responsive.html">Responsive</a> |
+            <a href="css-wow.html">CSS Wow</a>
+        </nav>
+        <h1>Welcome to tables!</h1>
+        <hr style="width:80%;">
+    </header>
+    <div class="contains_table">
+        <table class="lefttable">
+            <caption>Monthly Expenses</caption>
+            <thead style="color:white">
+                <tr>
+                    <th>Month</th>
+                    <th>Amount Spent</th>
+                    <th>Annual Recurring Expenses</th>
+                </tr>
+            </thead>
+            <tbody style="color: red;">
+                <tr>
+                    <td>January</td><td>$300</td><td rowspan="5">$500</td>
+                </tr>
+                <tr>
+                    <td>February</td><td>$400</td>
+                </tr>
+                <tr>
+                    <td>March</td><td>$320.42
+                    </td>
+                </tr>
+                <tr>
+                    <td>April</td><td>$10.25</td>
+                </tr>
+                <tr>
+                    <td>May</td><td>$100.23</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Sum</td><td colspan="2">$1630.90</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p> This is some text that is on the right of the table</p>
+        <p> The data in this table has no meaning.</p>
+    </div>
+    <br>
+    <div class="contains_table">
+        <table class="righttable"> 
+            <caption>Daily Amount of Fruits Sold by Color</caption>
+            <colgroup>
+                <col span="1">
+                <col span="2" style="background-color:red">
+                <col span="2" style="background-color:yellow">
+                <col span="2" style="background-color:orange">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Red Apples</th>
+                    <th>Strawberries</th>
+                    <th>Bananas</th>
+                    <th>Lemons</th>
+                    <th>Oranges</th>
+                    <th>Mango</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td><td>1</td><td>3</td><td>2</td><td>5</td><td>10</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td><td>12</td><td>1</td><td>3</td><td>5</td><td>0</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td><td>15</td><td>12</td><td>2</td><td>2</td><td>1</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td><td>8</td><td>2</td><td>3</td><td>4</td><td>7</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>Friday</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+                </tr>
+            </tbody>
+            <tfoot style="background-color: white;">
+                <tr>
+                    <td>Sum</td>
+                    <td colspan="2">57</td>
+                    <td colspan="2">33</td>
+                    <td colspan="2">40</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>This is some text to allow the table to move to the right</p>
+        <p>The data in this table is fabricated</p>
+        <br>
+        <br><br><br>
+    </div>
+    <hr>
+</body>
+</html>

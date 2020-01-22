@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="favicon.ico" rel="icon"/>
+		<link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
+		<link href="main.css" rel="stylesheet"/>
+		<script src="main.js" type="text/javascript"></script>
+
+	</head>
+	<body>
+		<div class="intro">
+			<h1 class="intro-title">CSE 134B Homework 1 Website</h1>
+			<div id="author-info"></div>
+			<div id="major-info"></div>
+			<p class="intro-text">My name is <input id="name-input" type="text" maxlength="30"><button id="myBtn" onclick="updateName();">Update Name</button></p>
+
+			<p class="intro-text">My major is <input id="major-input" type="text" maxlength="30"><button id="myBtn" onclick="updateMajor();">Update Major</button></p>
+			<p>Today's date is <b>10/07/2019</b></p>
+		</div>
+		<div class="video-section">
+			<video controls>
+				<source src="videoplayback.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="img-section">
+			<a href="https://ucsd.edu" target="_blank">
+				<img src="ucsd.gif" alt="UCSD" width=700>
+			</a>
+			<br>
+			<img src="triton.jpg" alt="Triton" width=700>
+			<br>
+			<img src="bear.png" alt="Warren Bear" width=700>
+		</div>
+	</body>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBnMSb6Ume8dwRRsIabXusP_NkhsRKyFyo",
+    authDomain: "cse134b-ken-hw2.firebaseapp.com",
+    databaseURL: "https://cse134b-ken-hw2.firebaseio.com",
+    projectId: "cse134b-ken-hw2",
+    storageBucket: "cse134b-ken-hw2.appspot.com",
+    messagingSenderId: "696519850792",
+    appId: "1:696519850792:web:6eea070f25787b60f26e1d",
+    measurementId: "G-4V3MK78HZV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</html>

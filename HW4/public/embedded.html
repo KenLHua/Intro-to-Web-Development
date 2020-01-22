@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>HW2 - Embedded.html</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="head.html">Head</a> |
+            <a href="sections.html">Sections</a> |
+            <a href="grouping.html">Grouping</a> |
+            <a href="text.html">Text</a> |
+            <a href="tables.html">Tables</a> |
+            <span id="currentPage">Embedded</span> |
+            <a href="forms.html">Forms</a> |
+            <a href="interactive.html">Interactive</a> |
+            <a href="attributes.html">Attributes</a> |
+            <a href="misc.html">Misc</a> |
+            <a href="text-css.html">Text CSS</a> |
+            <a href="color-background.html">Color Background</a> |
+            <a href="boxes.html">Boxes</a> |
+            <a href="layout-float-position.html">Layout Float</a> |
+            <a href="layout-flex.html">Layout Flex</a> |
+            <a href="layout-grid.html">Layout Grid</a> |
+            <a href="responsive.html">Responsive</a> |
+            <a href="css-wow.html">CSS Wow</a> 
+        </nav>
+        <h1 class="animated jackInTheBox">Welcome to embedded!</h1>
+        <hr style="width:80%;">
+    </header>
+    <div id="music">
+        <p>Listen to some music</p>
+        <object data="media/crab.mp3">
+            <param name="autoplay" value="true">
+        </object>
+        <audio autoplay>
+            <source src="media/Shopkeeper.wav" type="audio/wav">
+            Your browser does not support the HTML5 audio tag.
+        </audio>
+    </div>
+    <div id="pictures">
+        <img alt="Cat vs Dog" src="media/cat_vs_dog.jpg" usemap="#image-map">
+        <map name="image-map">
+            <area  target="_blank" alt="Ollie the polite cat" href="media/polite_cat.png" coords="0,0,165,284" shape="rect">
+            <area  target="_blank" alt="Sad doggie" href="media/sad_dog.jpg" coords="168,1,334,283" shape="rect">
+        </map>
+        <br>
+        <picture>
+            <source media="(min-width: 700px)" srcset="media/driving_cat.jpg">
+            <img src="media/longcat.jpg" alt="Cool Cat Meme" style="width: auto;">
+        </picture>
+    </div>
+    <object width="600" height="900" data="media/object.pdf"></object>
+    <embed src="media/hearts.swf">
+    <video width="480" height="270" src="media/video.mp4" controls>
+        <track src="media/subtitle.vtt" kind="subtitles" srclang="en" label="English">
+        Your browswer does not support HTML5 video tag.
+    </video>
+    <p>An inline frame of index is shown below</p>
+    <iframe src="index.html" height="300" width="600">
+    </iframe>
+</body>
+</html>

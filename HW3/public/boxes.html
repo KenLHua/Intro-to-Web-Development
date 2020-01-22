@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/boxes.css" rel="stylesheet" type="text/css">
+    <title>Boxes</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="head.html">Head</a> |
+            <a href="sections.html">Sections</a> |
+            <a href="grouping.html">Grouping</a> |
+            <a href="text.html">Text</a> |
+            <a href="tables.html">Tables</a> |
+            <a href="embedded.html">Embedded</a> |
+            <a href="forms.html">Forms</a> |
+            <a href="interactive.html">Interactive</a> |
+            <a href="attributes.html">Attributes</a> |
+            <a href="misc.html">Misc</a> |
+            <a href="text-css.html">Text CSS</a> |
+            <a href="color-background.html">Color Background</a> |
+            <span id="currentPage">Boxes</span> |
+            <a href="layout-float-position.html">Layout Float</a> |
+            <a href="layout-flex.html">Layout Flex</a> |
+            <a href="layout-grid.html">Layout Grid</a> |
+            <a href="responsive.html">Responsive</a> |
+            <a href="css-wow.html">CSS Wow</a> |
+        </nav>
+        <h1>HW3 - Boxes</h1>
+        <hr style="width:80%;">
+    </header>
+    <div class="full" style="border: 2px dashed black;"><p>This is a paragraph element within a div.</p> 
+        <div class="innerDiv"> This is a div within a div. Divception. If we wanted more space between the content and the elements border, we can use padding. </div>
+        <div class="innerDiv" style="padding: 0px; margin-top:10px"> This is the same div with no padding.</div>
+        <div class="innerDiv" style="padding: 0px; margin-top:30px"> We can also change margin, which is the distance between elements.</div>
+        <div class="innerDiv" style="padding: 0px; margin-top:10px; margin-right:40px; padding-top:20px; padding-right:20px;" > Not all directions must have the same margin or padding. </div>
+    </div>
+    <div class="full"> You could also use border-top* to create interesting designs <br>
+        <div class="tabLeft">Tab 1</div>
+        <div class="tabMid">Tab 2</div>
+        <div class="tabRight">Tab 3</div>
+    </div>
+    <div class="full"> We can do the same with border-left-*, border-right-*, and border-bottom-* <br>
+        <div class="bookmark" style="text-align: left;">&nbsp; To form a bookmark</div>
+        <div class="underlineBorder" style="text-align: left;">or just for</div>
+        <div class="rightBorder" style="text-align: left;">anything you can imagine</div>
+    </div>
+    <div class="full"> 
+
+        <img src="media/Praise_cat.jpg" alt="Praise Cat" style="float:left" title="Priase Cat">
+        <h2> <u>Floating</u></h2>
+        <p class="startLeft"> This is some text that will float because of the image. We can display content that is offset due to other elements.</p>
+        <p style="clear:both;" class="startLeft"> If we don't want this effect, we can use the attribute clear.</p>
+    </div>
+    <div class="relative" style="text-align: left; border:2px solid black" >
+        <img class="relative" src="media/driving_cat.jpg" alt="Driving Cat" width="350" height="450">
+        <p style="z-index:0;">If <span class="overlapContent"> we  want to offset an element from its static positioning</span>, we can use relative positioning.</p>
+        <p> We <span class="overlapContent">can also have fixed elements that stay on view,</span> we can use fixed positioning.</p>
+        <p> Using z-index can allow us to describe which content should be overlapped, and which should do the overlapping.</p>
+    </div>
+    <div class="overflow">
+        <img src="media/longcat.jpg" alt="longcat">
+    </div>
+    <div id="fixedBanner">Thanks for visiting the site!</div>
+
+
+
+</body>
+
+</html>

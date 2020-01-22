@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/color-background.css" rel="stylesheet" type="text/css">
+    <title>Color Background</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="head.html">Head</a> |
+            <a href="sections.html">Sections</a> |
+            <a href="grouping.html">Grouping</a> |
+            <a href="text.html">Text</a> |
+            <a href="tables.html">Tables</a> |
+            <a href="embedded.html">Embedded</a> |
+            <a href="forms.html">Forms</a> |
+            <a href="interactive.html">Interactive</a> |
+            <a href="attributes.html">Attributes</a> |
+            <a href="misc.html">Misc</a> |
+            <a href="text-css.html">Text CSS</a> |
+            <span id="currentPage">Color Background</span> |
+            <a href="boxes.html">Boxes</a> |
+            <a href="layout-float-position.html">Layout Float</a> |
+            <a href="layout-flex.html">Layout Flex</a> |
+            <a href="layout-grid.html">Layout Grid</a> |
+            <a href="responsive.html">Responsive</a> |
+            <a href="css-wow.html">CSS Wow</a> 
+        </nav>
+        <h1>HW3 - Color Background</h1>
+        <hr style="width:80%;">
+    </header>
+    <div class="container">
+        <div id=left>
+            <img style="text-align: left" class="border" src="media/material_purple.png" alt="Material Purple"
+                title="Material Design Purple Pallete">
+            <p class=purpleBox><span>This is an example of how to implement color into a textbox. More
+                    information and guidelines can be found at <a style="color:rgb(161,82,252);"
+                        href="https://material.io/">material.io</a></span>
+            </p>
+        </div>
+        <div id=center>
+            <p>This is text is being displayed within an image. You can do this by
+                using the image as a background-image.
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <span style="color:white;">There's more content if you scroll. The image also moves too!</span>
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            </p>
+        </div>
+        <div id=right>
+            <p>Similarly, we can use images that repeat itself to
+                fill the area.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="full" id = gradientPurple >
+            <p style="color:white;">You can also position a background image within a frame. Here we have it offset to the left.</p>
+            <p id=offsetBackground>Here is the offset image</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class = "full" id = "gradientPink">
+            Instead of doing a linear gradient, you can also do a radial gradient
+        </div>
+    </div>
+    <div class="container">
+        <p class="full" id="translucentPurple">You can also set the opacity of elements, but this will also
+            change the text's opacity and its background.
+        </p>
+    </div>
+    
+
+
+</body>
+</html>
